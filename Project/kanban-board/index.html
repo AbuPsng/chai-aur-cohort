@@ -8,28 +8,70 @@
   </head>
   <body>
     <section>
-      <nav><button>Delete</button></nav>
-
-      <!-- <form id="modal">
-        <input
-          type="text"
-          name="task"
-          id="task"
-          placeholder="Enter your task"
-        />
-        <div>
-          <button id="submit-btn" type="submit">Add Task</button>
-          <button id="cancel-btn">Cancel</button>
+      <nav>
+        <p id="nav-para-holder">Total Task:0</p>
+        <div id="nav-btn-holder">
+          <button id="toggle-modal-btn">
+            <span>➕</span> <span>Add container</span></button
+          ><button id="delete-task-container-btn">Delete</button>
         </div>
-      </form> -->
+      </nav>
 
-      <main class="container">
-        <div class="taskContainer">
+      <div id="modal-back-screen" class="modal-back-screen">
+        <div id="modal">
+          <input type="text" id="task-input" placeholder="Please enter title" />
+          <input
+            type="text"
+            id="task-description-input"
+            placeholder="Please task description"
+          />
+          <div id="colors-container">
+            <p>Select color</p>
+            <div id="color-selector"></div>
+          </div>
+          <div>
+            <button id="create-task-container-btn" type="submit">Create</button>
+            <button id="cancel-modal-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <main id="container" class="container">
+        <div id="container-1" class="taskContainer font-navy-blue bg-purple">
           <div class="taskContainer-heading-container">
-            <h3>Task Initiated</h3>
+            <div class="taskContainer-right-side">
+              <span class="task-number">3</span>
+              <h3>Task Initiated</h3>
+            </div>
+            <div class="container-btn-holder">
+              <button class="container-btn edit">
+                <img src="./assets/icons/edit-card.svg" alt="" />
+              </button>
+              <button class="container-btn delete">
+                <img src="./assets/icons/delete-card.svg" alt="" />
+              </button>
+            </div>
           </div>
           <div class="taskContainer-card-container">
-            <div class="card">
+            <div id="card-1" class="card" draggable="true">
+              <div class="card-text">
+                <h4 class="card-heading font-navy-blue">Make Bed</h4>
+                <p class="card-para">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, amet.
+                </p>
+              </div>
+              <div class="card-btn-holder">
+                <button class="card-btn edit">
+                  <img src="./assets/icons/edit-card.svg" alt="" />
+                </button>
+                <button class="card-btn delete">
+                  <img src="./assets/icons/delete-card.svg" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div id="card-2" class="card" draggable="true">
               <p class="card-para">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Architecto, amet.
@@ -43,10 +85,11 @@
               </div>
             </div>
           </div>
+          <button class="add">
+            <span>➕</span>
+            <span>Add new task</span>
+          </button>
         </div>
-        <div class="taskContainer"></div>
-        <div class="taskContainer"></div>
-        <div class="taskContainer"></div>
       </main>
     </section>
 
